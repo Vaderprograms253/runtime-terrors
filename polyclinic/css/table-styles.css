@@ -1,0 +1,28 @@
+
+/* CENTER TABLE HEADERS */
+#health-management-information, #medical-records, #film-library {
+    text-align: center;
+}
+
+/* POSITIONING TABLE IN CONTAINER */
+#facility-table {
+    margin: auto;
+}
+
+/* ALIGN CELLS VERTICALLY */
+#facility-table td {
+    vertical-align: middle;
+}
+
+/* FIX HEADER FONT WEIGHT */
+#facility-table th {
+    font-weight: 700;
+}
+
+/* MINIMUM COLUMN WIDTH */
+.min-w-12rem {
+    min-width: 12rem;
+}
+.min-w-8rem {
+    min-width: 8.5rem;
+}

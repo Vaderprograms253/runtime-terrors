@@ -1,0 +1,44 @@
+/***   WEBSITE FONT   ***/
+/* Table header font styles are in "table-styles.css" */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+h1 {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+}
+
+/*** BUTTON STYLES ***/
+/* Print Button positioning */
+.bottom-right-0 {
+    bottom: 0;
+    right: 0;
+    z-index: 1030;
+}
+#printBtn img {
+    width: 100%;
+}
+#printBtn:hover { /* Increase image size when hovering over it */
+    margin: 2px 2px 2px 2px;
+}
+
+/* Login button */
+#loginBtn {
+    /* Spacing */
+    padding: 5px 14px;
+
+    /* Font */
+    font-size: 18px;
+    font-weight: 700;
+    color: #316bbe;
+
+    /* Background */
+    background-color: white;
+    border: 0 solid white;
+}
+#loginBtn:hover {
+    color: #00396c;
+    text-decoration: underline;
+}
