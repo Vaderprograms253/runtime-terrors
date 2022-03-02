@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/table-styles.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600&display=swap" rel="stylesheet">
+
+    <title>Imaging Facilities</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/polyclinic-favicon.png">
+</head>
+
+<body class="mb-5">
+
+    <!--  ====================   HEADER   ====================  -->
+
+    <header>
+        <!-- Top of Header -->
+        <div class="header_top justify-content-between max-w-1300">
+
+            <!-- Polyclinic Logo -->
+            <div class="pt-2 ml-2">
+                <img class="polyLogo" src="images/rsz_polyclinic-optum-logo.png" alt="Polyclinic Optum Logo">
+            </div>
+
+            <!-- Login Button -->
+            <div class="loginBtnDiv float-right">
+                <button id="signOutBtn" class="loginButtons"><a href="index.html">Sign Out</a></button>
+            </div>
+
+        </div><!-- End of Header_top -->
+
+
+        <!-- Bottom of Header (Search Bar) -->
+        <div class="header_btm p-2" id="search-bar">
+            <div class="row mx-auto max-w-1300">
+                <!-- Search input/button -->
+                <div class="col-6">
+                    <label class="text-white" for="searchByName">Search By Facility Name: </label>
+                    <input type="text" id="searchByName" placeholder="e.g. Kaiser">
+
+                    <button id="searchBtn">Search</button>
+                </div>
+
+                <!--New entry popup -->
+                <div class="col-3 align-middle">
+                    <button type="button" class="btn searchBarBtn" data-toggle="modal" data-target="#newEntry">Add new Entry</button>
+                </div>
+
+                <!-- Edit Entry Button -->
+                <div class="col-3 align-middle ">
+                    <button type="button" id="toggleEditBtn" class="btn searchBarBtn">Enable Editing</button>
+                </div>
+
+            </div> <!-- End of Row -->
+        </div> <!-- END of Search Bar -->
+
+
+        <!-- Generate Printable Page (Opens in new tab) -->
+        <div class="position-fixed bottom-right-0 m-4">
+            <a id="printBtn" class="" href="printableFacilityRecords.html" target="_blank"><img src="images/printer-icon.png" alt="Printer Icon"></a>
+        </div>
+
+    </header>
+
+    <!-- Page Content -->
+    <main class="p-0 max-w-1300">
+
+        <!-- ====================   FACILITIES TABLE   ====================   -->
+
+        <!-- Data/Records -->
+        <div class="d-block table-responsive-xl mx-auto" id="facility-table">
+            <table class="table table-striped table-bordered align-middle">
+                <!-- Table header -->
+                <thead>
+                    <tr>
+                        <th colspan="7" id="health-management-information"> Health Information Management</th>
+                    </tr>
+                    <tr>
+                        <th scope="col" colspan="2" id="facility">Facility</th>
+                        <th scope="col" colspan="2" id="medical-records">Medical Records</th>
+                        <th scope="col" colspan="3" id="film-library">Film Library</th>
+                    </tr>
+                    <tr>
+                        <!-- Facility -->
+                        <th scope="col" class="flex-xl-column min-w-12rem">Organization</th>
+                        <th>Location</th>
+
+                        <!-- Medical Records -->
+                        <th scope="col" class="min-w-8rem">Direct Line</th>
+                        <th scope="col" class="min-w-8rem">Fax</th>
+
+                        <!-- Film Library -->
+                        <th scope="col" class="min-w-8rem">Direct Line</th>
+                        <th scope="col" class="min-w-8rem">Fax</th>
+                        <th scope="col" class="pl-4">Push Images?
+                            <div class="d-inline">
+                                <span title="Yes- No- No*">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-info-circle mb-2" id="info-circle" viewBox="0 0 16 16">
+                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                        </svg>
+                                </span>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+
+                <!-- Table body -->
+                <tbody>
+                <tr>
+                    <td>Allenmore Hospital and Medical Center</td>
+                    <td>Tacoma, WA</td>     <!-- Location (City, State) -->
+                    <td>253.333.2419</td>   <!-- Medical Records Fax -->
+                    <td>253.403.2302</td>   <!-- Medical Records Direct Line -->
+                    <td>253.403.1574</td>   <!-- Film Library Direct Line -->
+                    <td>206.292.6375</td>   <!-- Film Library Fax -->
+                    <td>Yes</td>            <!-- Push Images? -->
+                </tr>
+                <tr>
+                    <td>Center for Diagnostic Imaging (CDI)</td>
+                    <td>Renton, WA</td>     <!-- Location (City, State) -->
+                    <td>N/A</td>            <!-- Medical Records Direct Line -->
+                    <td>N/A</td>            <!-- Medical Records Fax -->
+                    <td>206.524.5599</td>   <!-- Film Library Direct Line -->
+                    <td>425.251.4307</td>   <!-- Film Library Fax -->
+                    <td>Yes</td>            <!-- Push Images? -->
+                </tr>
+                <tr>
+                    <td>Children's Hospital & Regional Medical Center</td>
+                    <td>Renton, WA</td>     <!-- Location (City, State) -->
+                    <td>(206) 987-2173</td> <!-- Medical Records Direct Line -->
+                    <td>(206) 985-3252</td> <!-- Medical Records Fax -->
+                    <td>(206) 987-2731</td> <!-- Film Library Direct Line -->
+                    <td>(206) 987-2093</td> <!-- Film Library Fax -->
+                    <td>Yes</td>            <!-- Push Images? -->
+                </tr>
+                <tr>
+                    <td>Enumclaw Regional Hospital</td>
+                    <td>Enumclaw, WA</td>   <!-- Location (City, State) -->
+                    <td>253.792.2400</td>   <!-- Medical Records Direct Line -->
+                    <td>253.779.6245</td>   <!-- Medical Records Fax -->
+                    <td>253.426.4281</td>   <!-- Film Library Direct Line -->
+                    <td>253.426.6881</td>   <!-- Film Library Fax -->
+                    <td>Yes</td>            <!-- Push Images? -->
+                </tr>
+                <tr>
+                    <td>Kindred Hospital Seattle</td>
+                    <td>Seattle, WA</td>    <!-- Location (City, State) -->
+                    <td>206.922.6950</td>   <!-- Medical Records Direct Line -->
+                    <td>855.392.3637</td>   <!-- Medical Records Fax -->
+                    <td>206.922.6580</td>   <!-- Film Library Direct Line -->
+                    <td>(855) 392-3637</td> <!-- Film Library Fax -->
+                    <td>No*</td>            <!-- Push Images? -->
+                </tr>
+                </tbody>
+            </table>
+        </div> <!-- Table Div -->
+    </main>
+
+
+    <!-- ====================   NEW ENTRY POP-UP   ==================== -->
+
+    <div class="modal" id="newEntry">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h3>Add new entry</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="organization">Organization</label>
+                            <input type="text" class="form-control" id="organization" name="organization">
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" class="form-control" name="edit-location" list="location-list">
+                            <datalist class="d-none" id="location-list">
+                                <option>Bellevue, WA</option>
+                                <option>Edmonds, WA</option>
+                                <option>Issaquah, WA</option>
+                                <option>Seattle, WA</option>
+                                <option>Tacoma, WA</option>
+                            </datalist>
+                        </div>
+                        <div class="form-group">
+                            <h4>Medical Records</h4>
+                            <label for="direct-line-record">Direct Line</label>
+                            <input type="tel" class="form-control mb-2" id="direct-line-record" placeholder="(---) --- ----" name="direct-line-record">
+                            <label for="fax-record">Fax</label>
+                            <input type="tel" class="form-control" id="fax-record" placeholder="(---) --- ----" name="fax-record">
+                        </div>
+                        <div class="form-group">
+                            <h4>Film Library</h4>
+                            <label for="direct-line-film">Direct Line</label>
+                            <input type="tel" class="form-control mb-2" id="direct-line-film" placeholder="(---) --- ----" name="direct-line-film">
+                            <label for="fax-film">Fax</label>
+                            <input type="tel" class="form-control" id="fax-film" placeholder="(---) --- ----" name="fax-film">
+                        </div>
+                        <h4>Push Images?</h4>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline1" name="customRadioInline" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline1">Yes</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline2" name="customRadioInline" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline2">No</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline3" name="customRadioInline" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline3">No*</label>
+                        </div>
+                        <div class="btn-submit mt-4">
+                        <button type="button" class="submit-changes btn display-2 text-white">Submit Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ====================   EDIT ENTRY POP-UP   ==================== -->
+
+    <div class="modal" id="editEntry">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h3>Edit Entry<span id="editPopupHeader"></span></h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="edit-organization">Organization:</label>
+                            <input type="text" class="form-control" id="edit-organization" name="organization">
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-location">Location</label>
+                            <input type="text" id="edit-location" class="form-control" name="edit-location" list="edit-location-list">
+                            <datalist class="d-none" id="edit-location-list">
+                                <option>Bellevue, WA</option>
+                                <option>Edmonds, WA</option>
+                                <option>Issaquah, WA</option>
+                                <option>Seattle, WA</option>
+                                <option>Tacoma, WA</option>
+                            </datalist>
+                        </div>
+                        <div class="form-group">
+                            <h4>Medical Records</h4>
+                            <label for="edit-direct-line-record">Direct Line</label>
+                            <input type="tel" class="form-control mb-2" id="edit-direct-line-record" placeholder="(---) --- ----" name="direct-line-record">
+                            <label for="edit-fax-record">Fax</label>
+                            <input type="tel" class="form-control" id="edit-fax-record" placeholder="(---) --- ----" name="fax-record">
+                        </div>
+                        <div class="form-group">
+                            <h4>Film Library</h4>
+                            <label for="edit-direct-line-film">Direct Line</label>
+                            <input type="tel" class="form-control mb-2" id="edit-direct-line-film" placeholder="(---) --- ----" name="direct-line-film">
+                            <label for="edit-fax-film">Fax</label>
+                            <input type="tel" class="form-control" id="edit-fax-film" placeholder="(---) --- ----" name="fax-film">
+                        </div>
+                        <h4>Push Images?</h4>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline4" name="customRadioInline1" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline4">Yes</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline5" name="customRadioInline1" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline5">No</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline6" name="customRadioInline1" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline6">No*</label>
+                        </div>
+                        <div class="btn-submit mt-4">
+                            <button type="button" class="submit-changes btn display-2 text-white">Submit Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ====================   SCRIPTS   ==================== -->
+
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <!-- JavaScript Files -->
+    <script src="js/enableEdit.js"></script> <!-- Assigns/Handles the edit button click event -->
+    <script src="js/editEntry.js"></script> <!-- This contains the click event for editing entries -->
+</body>
+</html>

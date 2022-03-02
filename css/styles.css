@@ -1,0 +1,188 @@
+    /***   WEBSITE FONT   ***/
+/* Table header font styles are in "table-styles.css" */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+/* Print Button positioning */
+.bottom-right-0 {
+    bottom: 0;
+    right: 0;
+    z-index: 1030;
+}
+
+#printBtn img {
+    width: 100%;
+}
+#printBtn:hover { /* Increase image size when hovering over it */
+    margin: 2px 2px 2px 2px;
+}
+
+/* Inline validation */
+.err {
+    display: none;
+    color: darkred;
+}
+
+#err-username, #err-password {
+    font-size: .9em;
+    float: left;
+    padding-left: 13px;
+}
+
+#loginBtn {
+    padding: 0 15px 0 15px;
+}
+
+/* Login button */
+.loginButtons {
+    /* Font */
+    font-size: 18px;
+    font-weight: 700;
+    color: #316bbe;
+
+    /* Background */
+    background-color: transparent;
+    border: 0 solid white;
+}
+
+/* Login buttons hover effect */
+.loginButtons:hover {
+    color: #00396c;
+    text-decoration: underline;
+}
+
+/* Sign out button color */
+#signOutBtn {
+    color: #316bbe;
+}
+
+/* Abbreviation for Image Type when creating/ editing entry */
+abbr[title]{
+    text-decoration: none;
+}
+
+/* Login Spacing */
+.loginBtnDiv {
+    margin: 1rem;
+    height: 37px;
+}
+
+/* Login button for modal popup */
+.modal-login-button {
+    background-color: #001a70;
+    color: white;
+}
+
+/* Header */
+header {
+    display: block;
+}
+
+#search-bar {
+    height: 55px;
+}
+
+#suggestEditBtn {
+    padding: 0 0 0 5px;
+}
+
+.header_top, main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+}
+.max-w-1300 {
+    max-width: 1300px;
+}
+
+@media screen and (min-width: 1300px) {
+    .dpl-header__top {
+        min-height: 72px;
+        justify-content: space-between;
+    }
+    .loginBtnDiv {
+        margin-right: 0;
+    }
+}
+
+/* Logo */
+.webLogo {
+    width: 75px;
+    padding-left: 0.5rem;
+}
+@media screen and (min-width: 1300px) {
+    .webLogo {
+        padding-left: 0;
+    }
+}
+
+/* Submit changes button for Modal */
+.submit-changes {
+    background: #001a70;
+}
+/* Search bar */
+#search-bar {
+    border-top: 4px solid #006a8d;
+    background-color: #444;
+}
+
+.btn {
+    padding: .28rem 0.75rem !important;
+}
+
+.searchBarBtn {
+    color: #fff;
+    background-color: #001a70;
+    border-radius: 32px;
+}
+#menuBtnDiv {
+    color: #fff;
+    background-color: #001a70;
+    border-color: #001a70;
+}
+#searchOptions {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+.loginBtnDiv{
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: .75rem 2vw .75rem .75rem;
+    transition: margin-right, 500ms;
+}
+#search-bar{
+    z-index: 1;
+}
+/* Summary Spacing */
+.summaryForm p {
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 1300px) {
+    .loginBtnDiv {
+        margin-right: 4vw;
+    }
+}
+
+/* Dropdown List */
+#dropdownList {
+    transform: translate3d(-1px, 40px, 0px) !important;
+    border: none;
+    background-color: lightgray;
+    min-width: 16rem;
+}
+.dropdown-header {
+    color: black;
+    font-size: 1rem !important;
+    padding: 0.5rem 1rem !important;
+}
+.dropdown-divider {
+    border-color: rgba(	0, 26, 112, 20%);
+    border-width: 1.5px;
+
+}

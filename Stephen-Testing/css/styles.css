@@ -1,0 +1,130 @@
+    /***   WEBSITE FONT   ***/
+/* Table header font styles are in "table-styles.css" */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+/* Print Button positioning */
+.bottom-right-0 {
+    bottom: 0;
+    right: 0;
+    z-index: 1030;
+}
+
+#printBtn img {
+    width: 100%;
+}
+#printBtn:hover { /* Increase image size when hovering over it */
+    margin: 2px 2px 2px 2px;
+}
+
+.err {
+    display: none;
+    color: darkred;
+}
+
+#err-username, #err-password {
+    font-size: .9em;
+    float: left;
+    padding-left: 13px;
+}
+
+#loginBtn {
+    padding: 0 15px 0 15px;
+}
+
+/* Login button */
+.loginButtons {
+    /* Font */
+    font-size: 18px;
+    font-weight: 700;
+    color: #316bbe;
+
+    /* Background */
+    background-color: white;
+    border: 0 solid white;
+}
+
+/* Login buttons hover effect */
+.loginButtons:hover {
+    color: #00396c;
+    text-decoration: underline;
+}
+
+/* Sign out button color */
+#signOutBtn {
+    color: #316bbe;
+}
+
+/* Abbreviation for Image Type when creating/ editing entry */
+abbr[title]{
+    text-decoration: none;
+}
+
+/* Login Spacing */
+.loginBtnDiv {
+    margin: 1rem;
+    height: 37px;
+}
+
+/* Login button for modal popup */
+.modal-login-button {
+    background-color: #001a70;
+    color: white;
+}
+
+/* Header */
+header {
+    display: block;
+}
+
+#search-bar {
+    height: 55px;
+}
+
+#suggestEditBtn {
+    padding: 0 0 0 5px;
+}
+
+.header_top, main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+}
+.max-w-1300 {
+    max-width: 1300px;
+}
+
+@media screen and (min-width: 1300px) {
+    .dpl-header__top {
+        min-height: 72px;
+        justify-content: space-between;
+    }
+    .loginButtons {
+        padding-right: 0;
+    }
+    .loginBtnDiv {
+        margin-right: 0;
+    }
+}
+
+/* Submit changes button for Modal */
+.submit-changes {
+    background: #001a70;
+}
+/* Search bar */
+#search-bar {
+    border-top: 4px solid #006a8d;
+    background-color: #444;
+}
+
+.btn {
+    padding: .28rem 0.75rem !important;
+}
+
+.searchBarBtn {
+    color: #fff;
+    background-color: #001a70;
+    border-radius: 32px;
+}

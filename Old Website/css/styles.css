@@ -1,0 +1,116 @@
+    /***   WEBSITE FONT   ***/
+/* Table header font styles are in "table-styles.css" */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+/* Print Button positioning */
+.bottom-right-0 {
+    bottom: 0;
+    right: 0;
+    z-index: 1030;
+}
+
+#printBtn img {
+    width: 100%;
+}
+#printBtn:hover { /* Increase image size when hovering over it */
+    margin: 2px 2px 2px 2px;
+}
+
+
+/* Login button */
+.loginButtons {
+    /* Spacing */
+    padding: 5px 14px;
+
+    /* Font */
+    font-size: 18px;
+    font-weight: 700;
+    color: #316bbe;
+
+    /* Background */
+    background-color: white;
+    border: 0 solid white;
+}
+
+/* Login buttons hover effect */
+.loginButtons:hover {
+    color: #00396c;
+    text-decoration: underline;
+}
+
+/* Sign out button color */
+#signOutBtn {
+    color: #316bbe;
+}
+
+/* Login Spacing */
+.loginBtnDiv {
+    margin: 1rem;
+    height: 37px;
+}
+
+/* Login button for modal popup */
+.modal-login-button{
+    background-color: #001a70;
+    color: white;
+}
+
+/* Header */
+header {
+    display: block;
+}
+.header_top, main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+}
+.max-w-1300 {
+    max-width: 1300px;
+}
+
+@media screen and (min-width: 1300px) {
+    .dpl-header__top {
+        min-height: 72px;
+        justify-content: space-between;
+    }
+    .loginButtons {
+        padding-right: 0;
+    }
+    .loginBtnDiv {
+        margin-right: 0;
+    }
+}
+
+/* Polyclinic Logo */
+.polyLogo {
+    width: 220px;
+    padding-left: 0.5rem;
+}
+@media screen and (min-width: 1300px) {
+    .polyLogo {
+        padding-left: 0;
+    }
+}
+
+/* Submit changes button for Modal */
+.submit-changes {
+    background: #001a70;
+}
+/* Search bar */
+#search-bar {
+    border-top: 4px solid #006a8d;
+    background-color: #444;
+}
+
+.btn {
+    padding: .28rem 0.75rem !important;
+}
+
+.searchBarBtn {
+    color: #fff;
+    background-color: #001a70;
+    border-radius: 32px;
+}

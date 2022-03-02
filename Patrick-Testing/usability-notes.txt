@@ -1,0 +1,5 @@
+NOTES:
+datatables - search
+make login button bigger/ more obvious
+check validation guidlines sprint 1
+add description for edit button

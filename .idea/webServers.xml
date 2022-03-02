@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="67b9737d-0fac-4278-a23c-9b0b6a16262a" name="runtimedev">
+        <fileTransfer rootFolder="/home/runtimet/public_html" accessType="SFTP" host="runtime-terrors.greenriverdev.com" port="18765" sshConfigId="0552877f-5b07-4f5d-8ad5-78fc0fdb279d" sshConfig="runtimet@runtime-terrors.greenriverdev.com:18765 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

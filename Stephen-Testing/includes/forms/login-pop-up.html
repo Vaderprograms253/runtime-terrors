@@ -1,0 +1,51 @@
+<div class="modal" id="loginPanel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Login Form (Contains Body and footer) -->
+            <form action="logged-in.php" method="post" id="loginForm">
+
+                <!-- Login Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Enter username and password:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <!-- Modal Body (Contains Login Form fields) -->
+                <div class="modal-body pt-4">
+
+                    <!-- Username -->
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <p><label for="usernameInput">Username: </label></p>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" name="username" id="usernameInput">
+                            <span class="err" id="err-username">Please enter valid username</span>
+                        </div>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <p><label for="passwordInput">Password: </label></p>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" name="password" id="passwordInput">
+                            <span class="err" id="err-password">Please enter valid password</span>
+                        </div>
+                    </div>
+
+                </div> <!-- END of Modal Body -->
+
+                <!-- Modal Footer (Contains the buttons) -->
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary d-inline" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="modal-login-button btn btn-primary d-inline">Login</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div> <!-- LOGIN POP-UP -->

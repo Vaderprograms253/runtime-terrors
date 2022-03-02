@@ -1,0 +1,162 @@
+
+/* ===========   STYLING FOR WIDE SCREENS   =========== */
+/* SOURCE: https://stackoverflow.com/questions/63216266/convert-rows-of-html-table-into-bootstrap-cards */
+/* Entries are displayed in a table */
+
+/* CENTER TABLE HEADERS */
+#health-management-information, #medical-records, #film-library {
+    text-align: center;
+}
+/* CENTER PUSH IMAGES RESULTS */
+td:nth-of-type(7) {
+    text-align: center;
+}
+
+/* PUSH IMAGE COLUMN WIDTH */
+th#push-image-col.sorting{
+    width: 10%; !important
+}
+
+/* POSITIONING TABLE IN CONTAINER */
+#facility-table {
+    width: 100%;
+}
+
+/* ALIGN CELLS VERTICALLY */
+#facility-table td {
+    vertical-align: middle;
+}
+
+/* FIX HEADER FONT WEIGHT */
+#facility-table th {
+    font-weight: 700;
+}
+
+/* MINIMUM COLUMN WIDTH */
+.min-w-12rem {
+    min-width: 12rem !important;
+}
+.min-w-8rem {
+    min-width: 6.8rem !important;
+}
+.min-w-4rem {
+    min-width: 5rem !important;
+}
+
+
+/* ===========   STYLING FOR NARROW SCREENS   =========== */
+/* SOURCE: https://stackoverflow.com/questions/63216266/convert-rows-of-html-table-into-bootstrap-cards */
+/* Table rows are converted to cards for easier viewing on mobile */
+@media screen and (max-width: 1055px) {
+    tr {
+        display: block;
+        padding: 1rem 0.5rem 1rem 0.5rem;
+        margin: 1.5rem;
+        border: 1px solid grey;
+        border-radius: 10px;
+        box-shadow: 0 0 10px;
+    }
+
+    .table td {
+        display: block;
+        padding-left: 220px;
+    }
+
+    /* Add Headings to each of the fields */
+    td:nth-of-type(1)::before { /* https://css-tricks.com/how-nth-child-works/ */
+        content: "Organization:";
+    }
+    td:nth-of-type(2)::before {
+        content: "Location:";
+    }
+    td:nth-of-type(3)::before {
+        content: "Direct Line:";
+    }
+    td:nth-of-type(4)::before {
+        content: "Fax:";
+    }
+    td:nth-of-type(5)::before {
+        content: "Direct Line:";
+    }
+    td:nth-of-type(6)::before {
+        content: "Fax:";
+    }
+    td:nth-of-type(7)::before {
+        content: "Push Images?";
+    }
+
+    /* Bold Field Headings */
+    td::before {
+        font-weight: bold;
+
+        display: inline-block;
+        width: 210px;
+        margin-left: -210px;
+    }
+
+    /* Align Push Images data to left */
+    td:nth-of-type(7) {
+        text-align: left;
+    }
+
+    /* Remove Table striping for Cards */
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgba(0,0,0,0);
+    }
+
+    /* Remove Unnecessary Headers */
+    thead {
+        display: none;
+    }
+    table {
+         background: none !important;
+         border: none !important;
+     }
+}
+@media screen and (max-width: 768px) {
+    td::before {
+        width: 180px;
+        margin-left: -170px;
+    }
+    .table td {
+        padding-left: 180px;
+    }
+}
+@media screen and (max-width: 576px) {
+    td::before {
+        width: 140px;
+        margin-left: -140px;
+    }
+    .table td {
+        padding-left: 150px;
+    }
+}
+
+
+
+/* ===========   STYLING FOR TOGGLING EDIT   =========== */
+
+tr.clickable:hover {
+    background-color: rgba(0,0,0,.2);
+}
+
+.table-striped tbody tr.clickable:nth-of-type(odd):hover {
+    background-color: rgba(0,0,0,.2);
+}
+
+
+/* ===========   STYLING FOR DATATABLES   =========== */
+table.dataTable thead th, table.dataTable thead td {
+    padding: 12px !important;
+}
+
+table.dataTable thead th{
+    border-bottom: 1px solid #dee2e6 !important;
+}
+table.dataTable {
+    border: none !important;
+}
+
+table.dataTable thead {
+    border: none !important;
+}
