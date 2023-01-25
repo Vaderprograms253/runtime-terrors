@@ -1,3 +1,3 @@
-# runtime-terrors
-This group project was for a web development class for school
-The purpose of this project was to create an interface for a client that displayed medical records that was easy to read and could be edited
+# Polyclinic Sites
+- This is a project I worked on at Green River College for a client
+- This project consist of listing all the Polyclinic locations and being able to edit each location field
